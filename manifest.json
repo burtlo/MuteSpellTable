@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Mute SpellTable",
+  "description": "A Chrome extension to automatically mute Spell Table",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icons/logo.svg",
+    "default_title": "Mute SpellTable"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["https://spelltable.wizards.com/*"]
+  }],
+  "permissions": [
+    "https://spelltable.wizards.com/*"
+  ]
+}
