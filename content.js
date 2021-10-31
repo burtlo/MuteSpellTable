@@ -9,6 +9,7 @@ let playTableObserver = new MutationObserver(mutations => {
 
     if (mutation.nextSibling && mutation.nextSibling.className === "absolute bottom-0 inset-x-0 p-4 flex justify-between items-center") {
       mutation.nextSibling.querySelector("button").click();
+      playTableObserver.disconnect();
     }
   }
 });
